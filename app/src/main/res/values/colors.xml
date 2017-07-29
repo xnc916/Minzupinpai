@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    
+    <color name="colorBottomBarBackground">#efefef</color>
+    <color name="contentColor">#727171</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="mainBackgroundColor">#eb413d</color>
+    <color name="contentColorTwo">#9E9F9F</color>
+    <color name="colorSelect">#EE5C5C</color>
+
+    <color name="btn_red_color">#F05165</color>
+    <color name="colorTabbar">#ff6d00</color>
+
+    <color name="homeColorBackground">#f4f4f4</color>
+    <color name="SelectedTextColor">#ED413F</color>
+    <color name="IndicatorColor">#ED5955</color>
+
+    <color name="transparent_pink">#24ff0066</color>
+    <color name="item_bg">#f4f4f4</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#23000000</color>
+    <color name="transparent_h">#4d000000</color>
+    <color name="gap_line">#e6e6e6</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_777572">#777572</color>
+    <color name="toastcolor">#cd494949</color>
+
+
+    <color name="colorblack">#000000</color>
+
+    <color name="player_black">#000000</color>
+    <color name="player_white">#FFFFFF</color>
+    <color name="player_panel">#696969</color>
+    <color name="player_red">#FF0033</color>
+    <color name="player_blue">#333399</color>
+    <color name="player_green">#99CC33</color>
+    <color name="player_grey">#CCCCCC</color>
+    <color name="player_yellow">#FFCC00</color>
+    <color name="player_purple">#996699</color>
+    <color name="player_blue2">#0099cc</color>
+
+
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+
+    <color name="qr_blue">#FF0099CC</color>
+    <!-- 底部导航页的文字变化 -->
+    <color name="bottom_text_uncheck">#818295</color>
+    <color name="bottom_text_checked">#fc5811</color>
+</resources>
