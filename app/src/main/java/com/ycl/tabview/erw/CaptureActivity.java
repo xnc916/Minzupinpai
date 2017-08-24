@@ -20,6 +20,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.SurfaceHolder;
@@ -84,10 +86,10 @@ public class CaptureActivity extends Activity implements Callback {
         inactivityTimer = new InactivityTimer(this);
         CameraManager.init(getApplication());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.CAMERA)
-                    != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(new String[]{Manifest.permission.CAMERA},
-                        REQUEST_PERMISSION_CAMERA);
+            if (ContextCompat.checkSelfPermission(CaptureActivity.this,
+                    android.Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(CaptureActivity.this,
+                        new String[]{android.Manifest.permission.CAMERA},1);
             }
         }
 
@@ -97,7 +99,7 @@ public class CaptureActivity extends Activity implements Callback {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "xxxxxxxxxxxxxxxxxxxonResume");
+
         SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
         SurfaceHolder surfaceHolder = surfaceView.getHolder();
         if (hasSurface) {
@@ -121,7 +123,6 @@ public class CaptureActivity extends Activity implements Callback {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "xxxxxxxxxxxxxxxxxxxonPause");
         if (handler != null) {
             handler.quitSynchronously();
             handler = null;

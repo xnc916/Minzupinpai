@@ -21,6 +21,8 @@ public class GuidanceActivity extends AppCompatActivity {
     private ViewPager gdvp;
     private GuidanceAdapter gda;
     private ImageView[] gdiv;
+
+    String s = "3";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +31,14 @@ public class GuidanceActivity extends AppCompatActivity {
 
         SharedPreferences spf = getSharedPreferences("main",
                 Context.MODE_PRIVATE);
-        Boolean isFrist = spf.getBoolean("isFrist", true);
+        Boolean isFrist = true;
 
+        String banbei = spf.getString("banbei", "0");
+        if (!s.equals(banbei)){
+            isFrist = true;
+        }else {
+            isFrist = false;
+        }
 
         if (isFrist) {
             // 初始化控件
@@ -50,8 +58,6 @@ public class GuidanceActivity extends AppCompatActivity {
 
     }
 
-    private void setClick() {
-    }
 
     private void setData() {
         List<View> list = new ArrayList<View>();
@@ -94,7 +100,8 @@ public class GuidanceActivity extends AppCompatActivity {
                             SharedPreferences sp = getSharedPreferences("main",
                                     Context.MODE_PRIVATE);
                             SharedPreferences.Editor ed = sp.edit();
-                            ed.putBoolean("isFrist", false);
+                            //ed.putBoolean("isFrist", false);
+                            ed.putString("banbei",s);
                             ed.commit();
 
                             startActivity(gdin);

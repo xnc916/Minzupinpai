@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">中国民族品牌</string>
     <string name="scan_failed">Scan failed!</string>
-
+    <string name="popu_album">相册</string>
+    <string name="popu_camear">相机</string>
+    <string name="popu_cancle">取消</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

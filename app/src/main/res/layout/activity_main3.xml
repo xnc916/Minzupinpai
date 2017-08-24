@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ycl.tabview.nb.Main3Activity">
+    <com.ycl.tabview.nb.ContainerViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="52dp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.ycl.tabview.nb.MyRadioButton
+            android:id="@+id/radio_main"
+            style="@style/navigation_style"
+            android:checked="false"
+            app:drawableTop="@drawable/selector_main_bottom_tab_first"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            android:paddingLeft="0dp"
+            android:text="首页" />
+
+        <com.ycl.tabview.nb.MyRadioButton
+            android:id="@+id/radio_projects"
+            style="@style/navigation_style"
+            android:checked="false"
+            app:drawableTop="@drawable/selector_main_bottom_tab_second"
+            android:paddingLeft="0dp"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            android:text="客服" />
+
+        <com.ycl.tabview.nb.MyRadioButton
+            android:id="@+id/radio_studys"
+            style="@style/navigation_style"
+            android:checked="false"
+            app:drawableTop="@drawable/selector_main_bottom_tab_third"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            android:paddingLeft="0dp"
+            android:text="分类" />
+        <com.ycl.tabview.nb.MyRadioButton
+            android:id="@+id/radio_shop"
+            style="@style/navigation_style"
+            android:checked="true"
+            app:drawableTop="@drawable/selector_main_bottom_tab_shop"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            android:paddingLeft="0dp"
+            android:text="购物车" />
+
+        <com.ycl.tabview.nb.MyRadioButton
+            android:id="@+id/radio_user_center"
+            style="@style/navigation_style"
+            android:checked="false"
+            app:drawableTop="@drawable/selector_main_bottom_tab_forth"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            android:paddingLeft="0dp"
+            android:text="我的" />
+    </RadioGroup>
+
+</RelativeLayout>

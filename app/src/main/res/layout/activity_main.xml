@@ -9,12 +9,12 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="60dp" />
+        android:layout_marginBottom="52dp" />
 
     <RadioGroup
         android:id="@+id/radiogroup"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="52dp"
         android:background="#ffffff"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
@@ -24,8 +24,8 @@
             style="@style/navigation_style"
             android:checked="true"
             app:drawableTop="@drawable/selector_main_bottom_tab_first"
-            app:drawableHeight="25dp"
-            app:drawableWidth="25dp"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
             android:paddingLeft="0dp"
             android:text="首页" />
 
@@ -35,8 +35,8 @@
             android:checked="false"
             app:drawableTop="@drawable/selector_main_bottom_tab_second"
             android:paddingLeft="0dp"
-            app:drawableHeight="25dp"
-            app:drawableWidth="25dp"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
             android:text="客服" />
 
         <com.ycl.tabview.nb.MyRadioButton
@@ -44,8 +44,8 @@
             style="@style/navigation_style"
             android:checked="false"
             app:drawableTop="@drawable/selector_main_bottom_tab_third"
-            app:drawableHeight="25dp"
-            app:drawableWidth="25dp"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
             android:paddingLeft="0dp"
             android:text="分类" />
         <com.ycl.tabview.nb.MyRadioButton
@@ -53,8 +53,8 @@
             style="@style/navigation_style"
             android:checked="false"
             app:drawableTop="@drawable/selector_main_bottom_tab_shop"
-            app:drawableHeight="25dp"
-            app:drawableWidth="25dp"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
             android:paddingLeft="0dp"
             android:text="购物车" />
 
@@ -63,8 +63,8 @@
             style="@style/navigation_style"
             android:checked="false"
             app:drawableTop="@drawable/selector_main_bottom_tab_forth"
-            app:drawableHeight="25dp"
-            app:drawableWidth="25dp"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
             android:paddingLeft="0dp"
             android:text="我的" />
     </RadioGroup>

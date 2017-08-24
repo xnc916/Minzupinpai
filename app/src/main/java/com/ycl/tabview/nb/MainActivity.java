@@ -1,9 +1,11 @@
 package com.ycl.tabview.nb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -16,7 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements FragmentMy.CallBackValue,FragmentMain.CallBackValuemain,FragmentShequ.She,FragmentShop.Shopggg{
 
     public static final int TAB_HOME = 0;
     public static final int TAB_PROJECTS = 1;
@@ -46,6 +48,9 @@ public class MainActivity extends FragmentActivity {
     FragmentShequ fragmentShequ;
     FragmentShop fragmentShop;
     FragmentMy fragmentMy;
+    private FragmentViewPagerAdapter adapter;
+    private List<Fragment> fragments;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,13 +60,16 @@ public class MainActivity extends FragmentActivity {
 
         initView();
         addPageChangeListener();
+
+
+
     }
 
     private void initView() {
 
-        List<Fragment> fragments = new ArrayList<Fragment>();
+        fragments = new ArrayList<Fragment>();
 
-        fragmentMain = new FragmentMain();
+        fragmentMain = FragmentMain.newInstance("http://3.1budai.com/mobile/");
 
         FragmentHuodong fragmentHuodong = new FragmentHuodong();
 
@@ -79,7 +87,7 @@ public class MainActivity extends FragmentActivity {
 
         this.viewPager.setOffscreenPageLimit(0);
 
-        FragmentViewPagerAdapter adapter = new FragmentViewPagerAdapter(this.getSupportFragmentManager(), viewPager, fragments);
+        adapter = new FragmentViewPagerAdapter(this.getSupportFragmentManager(), viewPager, fragments);
 
     }
 
@@ -96,6 +104,7 @@ public class MainActivity extends FragmentActivity {
                         radioProjects.setChecked(true);
                         break;
                     case TAB_STUDYS:
+                        Log.e("++2++","执行了");
                         radioStudys.setChecked(true);
                         break;
                     case TAB_SHOP:
@@ -131,6 +140,7 @@ public class MainActivity extends FragmentActivity {
                 viewPager.setCurrentItem(TAB_PROJECTS, false);
                 break;
             case R.id.radio_studys:
+                Log.e("++++","执行了");
                 viewPager.setCurrentItem(TAB_STUDYS, false);
                 fragmentShequ.ScrollToTop();
                 break;
@@ -140,6 +150,7 @@ public class MainActivity extends FragmentActivity {
                 break;
             case R.id.radio_user_center:
                 viewPager.setCurrentItem(TAB_USER_CENTER, false);
+                fragmentMy.ScrollToTop();
                 break;
         }
     }
@@ -173,5 +184,111 @@ public class MainActivity extends FragmentActivity {
                 }
             }
         }).start();
+    }
+
+    @Override
+    public void SendMessageValue(final int i) {
+        switch (i){
+            case 1:
+                finish();
+                Intent intent1 = new Intent(MainActivity.this,Main1Activity.class);
+                startActivity(intent1);
+                break;
+            case 2:
+                finish();
+                Intent intent2 = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent2);
+                break;
+            case 3:
+                finish();
+                Intent intent3 = new Intent(MainActivity.this,Main3Activity.class);
+                startActivity(intent3);
+                break;
+            case 4:
+                finish();
+                Intent intent4 = new Intent(MainActivity.this,Main4Activity.class);
+                startActivity(intent4);
+                break;
+        }
+    }
+
+    @Override
+    public void SendMessageValuemain(int i) {
+        switch (i){
+            case 1:
+                finish();
+                Intent intent1 = new Intent(MainActivity.this,Main1Activity.class);
+                startActivity(intent1);
+                break;
+            case 2:
+                finish();
+                Intent intent2 = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent2);
+                break;
+            case 3:
+                finish();
+                Intent intent3 = new Intent(MainActivity.this,Main3Activity.class);
+                startActivity(intent3);
+                break;
+            case 4:
+                finish();
+                Intent intent4 = new Intent(MainActivity.this,Main4Activity.class);
+                startActivity(intent4);
+                break;
+        }
+
+
+    }
+
+    @Override
+    public void Sendshe(int i) {
+        switch (i){
+            case 1:
+                finish();
+                Intent intent1 = new Intent(MainActivity.this,Main1Activity.class);
+                startActivity(intent1);
+                break;
+            case 2:
+                finish();
+                Intent intent2 = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent2);
+                break;
+            case 3:
+                finish();
+                Intent intent3 = new Intent(MainActivity.this,Main3Activity.class);
+                startActivity(intent3);
+                break;
+            case 4:
+                finish();
+                Intent intent4 = new Intent(MainActivity.this,Main4Activity.class);
+                startActivity(intent4);
+                break;
+        }
+    }
+
+    @Override
+    public void Sendshop(int i) {
+        switch (i){
+            case 1:
+                finish();
+                Intent intent1 = new Intent(MainActivity.this,Main1Activity.class);
+                startActivity(intent1);
+                break;
+            case 2:
+                finish();
+                Intent intent2 = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent2);
+                break;
+            case 3:
+                finish();
+                Intent intent3 = new Intent(MainActivity.this,Main3Activity.class);
+                startActivity(intent3);
+                break;
+            case 4:
+                finish();
+                Intent intent4 = new Intent(MainActivity.this,Main4Activity.class);
+                startActivity(intent4);
+                break;
+        }
     }
 }

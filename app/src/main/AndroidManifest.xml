@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ycl.tabview">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:name=".nb.MyApp"
@@ -15,9 +17,21 @@
         android:icon="@mipmap/logo1"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".nb.MainActivity"
-            android:screenOrientation="portrait"/>
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:name">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ycl.tabview.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".nb.MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".WelcomeActivity"
             android:screenOrientation="portrait" />
@@ -31,7 +45,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".SimpleCaptureActivity" />
-        <activity android:name=".SousuoActivity"></activity>
+        <activity android:name=".SousuoActivity" />
+        <activity android:name=".nb.Main2Activity" />
+        <activity android:name=".nb.Main3Activity" />
+        <activity android:name=".nb.Main4Activity" />
+        <activity android:name=".nb.Main1Activity" />
+        <activity android:name=".nb.Main22Activity" />
+        <activity android:name=".nb.Main33Activity" />
+        <activity android:name=".nb.Main44Activity" />
+        <activity android:name=".phone.PhoneActivity" />
     </application>
 
 </manifest>
